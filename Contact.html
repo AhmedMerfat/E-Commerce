@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FFE7C1;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div id="content">
+
+    <form id="form">
+        <h5 class="label">Please enter you data:</h5>
+        <div class="mb-3">
+            <label class="form-label">Full name</label>
+            <input class="form-control" id="inName" aria-describedby="emailHelp" onblur="emptyName()">
+            <span style="color: red; display: none;" id="name"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input  type="email" class="form-control" id="inEmail" aria-describedby="emailHelp" onblur="invalidMail()">
+            <span style="color: red; display: none;" id="email"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Gender:</label>
+            <input  type="radio" name="gender" onblur="checkGender()" value="male"> Male
+            <input  type="radio" name="gender" onblur="checkGender()" value="female"> Female
+            <span style="color: red; display: none;" id="gender"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Country: </label>
+            <select class="form-select" id="select" aria-label="Default select example" onblur="selectCountry()">
+                <option value="none">Select your country</option>
+                <option value="egypt">Egypt</option>
+                <option value="algeria">Algeria</option>
+                <option value="oman">Oman</option>
+                <option value="lebanon">Lebanon</option>
+                <option value="syria">Syria</option>
+                <option value="ksa">KSA</option>
+                <option value="palestine">Palestine</option>
+                <option value="libya">Libya</option>
+            </select>
+            <span style="color: red; display: none;" id="country"></span>
+        </div>
+        <div class="form-floating">
+            <textarea onblur="emptyComment()" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <span style="color: red; display: none;" id="comment"></span>
+        </div>
+        <hr>
+        <div class="form-floating">
+
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+            <button type="reset" class="btn btn-danger" id="reset" onclick="resetForm()">Reset</button>
+
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

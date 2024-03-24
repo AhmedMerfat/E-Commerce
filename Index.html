@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,400&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+
+<nav>
+    <a href="Index.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Contact.html">Contact</a>
+    <div style="display: inline-flex; cursor: pointer;" onclick="showCart()">
+        <img src="https://cdn-icons-png.flaticon.com/512/7835/7835563.png" alt="" width="30" height="24" style="margin: 5px;" class="d-inline-block align-text-top">
+        <p style="color: #007bff; margin: 5px; background-color: aliceblue; padding: 3px; border-radius: 2px;" id="itemCount">0</p>
+    </div>
+
+</nav>
+    <div class="content">
+        <h2>Welcome to the Dashboard</h2>
+        <p>This is a simple dashboard example.</p>
+
+        <div>
+            <img src="Images/1.jpg" alt="Image" id="img"><br>
+        </div>
+
+        <a class="prev" onclick="next()">❮</a>
+        <a class="next" onclick="back()">❯</a>
+
+        <h2 id="top">All Products</h2>
+        <ul class="nav nav-tabs">
+            <li class="nav-item" >
+                <button class="nav-link active" id="allProducts" aria-current="page" href="#" onclick="showProducts()">Some Products</button>
+            </li>
+            <li class="nav-item" >
+                <button class="nav-link" id="phones" onclick="showPhones()" href="#">Smart Phones</button>
+            </li>
+            <li class="nav-item" >
+                <button class="nav-link" id="laptops" onclick="showLaptops()" href="#">Laptops</button>
+            </li>
+            <li class="nav-item" >
+                <button class="nav-link" id="fragrances" href="#" onclick="showFragrances()">Fragrances</button>
+            </li>
+            <li class="nav-item" >
+                <button class="nav-link" id="furniture" href="#" onclick="showFurniture()">Furniture</button>
+            </li>
+            <li class="nav-item" >
+                <button class="nav-link" id="watches" href="#" onclick="showWatches()">Men Watches</button>
+            </li>
+            <li class="nav-item" >
+                <button class="nav-link" id="jewellery" href="#" onclick="showJewellery()">Jewellery</button>
+            </li>
+        </ul>
+        <div id="products">
+
+        </div>
+
+    </div>
+<footer>
+    <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+    <div class="footer-data">
+        <div>
+            <h4>Contact Information</h4>
+            <p><a href="mailto:ahmed.saqr.ma7a@gmail.com">Email: ahmed.saqr.ma7a.com</a></p>
+            <p><a href="tel:+201221750343">Phone: +20 01221750343</a></p>
+        </div>
+        
+            <h4>Follow Us</h4>
+            <p><a href="http://www.facebook.com">Facebook</a> | <a  href="http://www.twitter.com">Twitter</a> | <a href="http://instagram.com">Instagram</a></p>
+        </div>
+</footer>
+<script src="Demo.js"></script>
+</body>
+</html>
